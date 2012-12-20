@@ -24,6 +24,10 @@
 		B6710D3F167FE846007B026E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6710D17167FE846007B026E /* Foundation.framework */; };
 		B6710D47167FE846007B026E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B6710D45167FE846007B026E /* InfoPlist.strings */; };
 		B6710D4A167FE846007B026E /* SpotTheDotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B6710D49167FE846007B026E /* SpotTheDotTests.m */; };
+		B6710D591680AE70007B026E /* TTSDot.m in Sources */ = {isa = PBXBuildFile; fileRef = B6710D581680AE70007B026E /* TTSDot.m */; };
+		B6710D5C1680AE98007B026E /* TTSMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B6710D5B1680AE98007B026E /* TTSMap.m */; };
+		B6710D5F1680AF1D007B026E /* TTSTestMap.m in Sources */ = {isa = PBXBuildFile; fileRef = B6710D5E1680AF1D007B026E /* TTSTestMap.m */; };
+		B693DB6D1682ABD9003F2F57 /* TTSDotToDotsList.m in Sources */ = {isa = PBXBuildFile; fileRef = B693DB6C1682ABD9003F2F57 /* TTSDotToDotsList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,16 @@
 		B6710D46167FE846007B026E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B6710D48167FE846007B026E /* SpotTheDotTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotTheDotTests.h; sourceTree = "<group>"; };
 		B6710D49167FE846007B026E /* SpotTheDotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotTheDotTests.m; sourceTree = "<group>"; };
+		B6710D571680AE70007B026E /* TTSDot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSDot.h; sourceTree = "<group>"; };
+		B6710D581680AE70007B026E /* TTSDot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSDot.m; sourceTree = "<group>"; };
+		B6710D5A1680AE98007B026E /* TTSMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSMap.h; sourceTree = "<group>"; };
+		B6710D5B1680AE98007B026E /* TTSMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSMap.m; sourceTree = "<group>"; };
+		B6710D5D1680AF1D007B026E /* TTSTestMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSTestMap.h; sourceTree = "<group>"; };
+		B6710D5E1680AF1D007B026E /* TTSTestMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSTestMap.m; sourceTree = "<group>"; };
+		B6710D601680B2D4007B026E /* TTSMapDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSMapDelegate.h; sourceTree = "<group>"; };
+		B693DB6A1682ABD9003F2F57 /* TTSDotMapDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSDotMapDataSource.h; sourceTree = "<group>"; };
+		B693DB6B1682ABD9003F2F57 /* TTSDotToDotsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTSDotToDotsList.h; sourceTree = "<group>"; };
+		B693DB6C1682ABD9003F2F57 /* TTSDotToDotsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTSDotToDotsList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,10 +135,11 @@
 			children = (
 				B6710D24167FE846007B026E /* TTSAppDelegate.h */,
 				B6710D25167FE846007B026E /* TTSAppDelegate.m */,
-				B6710D2D167FE846007B026E /* MainStoryboard_iPhone.storyboard */,
-				B6710D30167FE846007B026E /* MainStoryboard_iPad.storyboard */,
-				B6710D33167FE846007B026E /* TTSViewController.h */,
-				B6710D34167FE846007B026E /* TTSViewController.m */,
+				B6710D551680AE18007B026E /* Controllers */,
+				B6710D541680AE12007B026E /* Views */,
+				B6710D531680AE06007B026E /* Models */,
+				B6710D561680AE35007B026E /* Helpers */,
+				B6D78AC91682359C00D52331 /* Protocols */,
 				B6710D1C167FE846007B026E /* Supporting Files */,
 			);
 			path = SpotTheDot;
@@ -149,6 +164,8 @@
 			children = (
 				B6710D48167FE846007B026E /* SpotTheDotTests.h */,
 				B6710D49167FE846007B026E /* SpotTheDotTests.m */,
+				B6710D5D1680AF1D007B026E /* TTSTestMap.h */,
+				B6710D5E1680AF1D007B026E /* TTSTestMap.m */,
 				B6710D43167FE846007B026E /* Supporting Files */,
 			);
 			path = SpotTheDotTests;
@@ -161,6 +178,53 @@
 				B6710D45167FE846007B026E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6710D531680AE06007B026E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6710D571680AE70007B026E /* TTSDot.h */,
+				B6710D581680AE70007B026E /* TTSDot.m */,
+				B6710D5A1680AE98007B026E /* TTSMap.h */,
+				B6710D5B1680AE98007B026E /* TTSMap.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B6710D541680AE12007B026E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6710D2D167FE846007B026E /* MainStoryboard_iPhone.storyboard */,
+				B6710D30167FE846007B026E /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B6710D551680AE18007B026E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6710D33167FE846007B026E /* TTSViewController.h */,
+				B6710D34167FE846007B026E /* TTSViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B6710D561680AE35007B026E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B693DB6B1682ABD9003F2F57 /* TTSDotToDotsList.h */,
+				B693DB6C1682ABD9003F2F57 /* TTSDotToDotsList.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		B6D78AC91682359C00D52331 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B693DB6A1682ABD9003F2F57 /* TTSDotMapDataSource.h */,
+				B6710D601680B2D4007B026E /* TTSMapDelegate.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +342,9 @@
 				B6710D22167FE846007B026E /* main.m in Sources */,
 				B6710D26167FE846007B026E /* TTSAppDelegate.m in Sources */,
 				B6710D35167FE846007B026E /* TTSViewController.m in Sources */,
+				B6710D591680AE70007B026E /* TTSDot.m in Sources */,
+				B6710D5C1680AE98007B026E /* TTSMap.m in Sources */,
+				B693DB6D1682ABD9003F2F57 /* TTSDotToDotsList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6710D4A167FE846007B026E /* SpotTheDotTests.m in Sources */,
+				B6710D5F1680AF1D007B026E /* TTSTestMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +530,7 @@
 				B6710D4F167FE846007B026E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B6710D50167FE846007B026E /* Build configuration list for PBXNativeTarget "SpotTheDotTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +539,7 @@
 				B6710D52167FE846007B026E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
