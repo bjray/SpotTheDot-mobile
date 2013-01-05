@@ -7,6 +7,7 @@
 //
 
 #import "TTSViewController.h"
+#import "TTSCategoryListViewController.h"
 
 @interface TTSViewController ()
 
@@ -26,4 +27,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // @"presentSoloGame"
+}
 @end

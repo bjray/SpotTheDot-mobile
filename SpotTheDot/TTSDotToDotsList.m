@@ -13,6 +13,8 @@
 @interface TTSDotToDotsList()
 //@property (nonatomic, strong) NSMutableArray *dots;
 @property (nonatomic, strong) TTSMap *currentMap;
+@property (nonatomic, strong) NSArray *mapCategories;
+@property (nonatomic, strong) NSArray *mapList;
 @end
 
 @implementation TTSDotToDotsList
@@ -27,22 +29,31 @@
     return self;
 }
 
+
+
+#pragma mark - Protocol Methods
+- (NSInteger)dotCount {
+    return [self.currentMap pointCount];
+}
+
 - (TTSMap *)currentMap {
     if (!_currentMap) {
-//        self.currentMap = [self createStarMap];
-//        self.currentMap = [self createButterflyMap];
+        //        self.currentMap = [self createStarMap];
+        //        self.currentMap = [self createButterflyMap];
         self.currentMap = [self createTRexMap];
     }
     
     return _currentMap;
 }
 
-#pragma mark - Protocol Methods
-- (NSInteger)dotCount {
-    return [self.currentMap pointCount];
-//    return [self.dots count];
+- (NSArray *)mapCategories {
+    return [NSArray arrayWithObjects:@"Dinosaurs", @"Insects", @"Shapes", nil];
 }
 
+
+- (NSArray *)mapList {
+    return [NSArray arrayWithObjects:@"T-Rex", @"Star", @"Butterfly", nil];
+}
 
 
 #pragma mark - Private Methods
@@ -411,6 +422,11 @@
     
     aMap.points = localDots;
     return aMap;
+}
+
+- (void)setUpMapsAndCategories {
+    //NSMutableDictionary *data = [NSMutableDictionary dictionary];
+    
 }
 
 @end
